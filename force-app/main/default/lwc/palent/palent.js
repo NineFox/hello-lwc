@@ -24,4 +24,8 @@ export default class Palent extends LightningElement {
         },
       ];
     }
+
+    receiveToggleEvent(event){
+        this.showFeatures = event.detail;
+    }
 }

@@ -4,6 +4,8 @@
             <h1 class="slds-text-heading_large">{title}</h1>
             <h3>Write JavaScript, HTML, and CSS code, and preview the output in the interactive code editor.</h3>
 
+            <c-toggle label="Toggle Button" onsend={receiveToggleEvent}></c-toggle>
+
             <!-- Using an if statement -->
             <template if:true={showFeatures}>
                 <div class="slds-var-p-top_large">
