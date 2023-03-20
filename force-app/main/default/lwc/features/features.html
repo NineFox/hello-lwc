@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-var-p-top_large">
+        <div class="c-container slds-m-vertical_x-small">
+            <lightning-layout>
+                <lightning-layout-item>
+                    <div class="slds-text-heading_small slds-align_absolute-center">Features</div>
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <lightning-button-icon icon-name="utility:delete" variant="bare" alternative-text="Delete" class="slds-m-left_xx-small" title="Delete" onclick={sendDeleteEvent}></lightning-button-icon>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <!-- Using a for statement -->
+        <template for:each={features} for:item='item'>
+            <c-feature-item key={item.id} label={item.label} icon={item.icon}></c-feature-item>
+        </template>
+    </div>
+</template>
