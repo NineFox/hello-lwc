@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <div class="app slds-var-p-around_x-large">
+            <h1 class="slds-text-heading_large">{title}</h1>
+
+            <div class="slds-m-top_medium">
+                <c-feature-toggle label="Toggle Button" initial-toggle={showFeatures} onsend={receiveToggleEvent}></c-feature-toggle>
+            </div>
+
+            <!-- Using an if statement -->
+            <template if:true={showFeatures}>
+                <c-features features={features} ondelete={receiveDeleteEvent}></c-features>
+            </template>
+
+            <h2 class="slds-text-heading_medium slds-var-p-top_large">Resources</h2>
+            <a
+                href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_introduction">
+                Developer Guide
+            </a><br/>
+            <a href="https://developer.salesforce.com/docs/component-library/overview/components">Component Reference</a>
+	    </div>
+    </lightning-card>
+</template>
